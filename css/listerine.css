@@ -1,0 +1,686 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, button
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border: none;
+    list-style: none;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    cursor: default;
+}
+
+button::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+
+button {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    *overflow: visible;
+    *white-space: nowrap;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #023255;
+    background: #dbebf3;
+}
+
+.button {
+    display: block;
+    background: #ffd908; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffd908 0%, #febf05 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd908), color-stop(100%,#febf05)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffd908 0%,#febf05 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffd908 0%,#febf05 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffd908 0%,#febf05 100%); /* IE10+ */
+    background: linear-gradient(top,  #ffd908 0%,#febf05 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd908', endColorstr='#febf05',GradientType=0 ); /* IE6-9 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 2px 2px 2px -2px #000;
+    -webkit-box-shadow: 2px 2px 2px -2px #000;
+    -o-box-shadow: 2px 2px 2px -2px #000;
+    -ms-box-shadow: 2px 2px 2px -2px #000;
+    box-shadow: 2px 2px 2px -2px #000;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #ffd908; /* Old browsers */
+    background: -moz-linear-gradient(top,  #febf05 0%, #ffd908 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#febf05), color-stop(100%,#ffd908)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #febf05 0%,#ffd908 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #febf05 0%,#ffd908 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #febf05 0%,#ffd908 100%); /* IE10+ */
+    background: linear-gradient(top,  #febf05 0%,#ffd908 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febf05', endColorstr='#ffd908',GradientType=0 ); /* IE6-9 */
+}
+
+.button span {
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 0 0 0 26px;
+    text-align: left;
+}
+
+.button-left span {
+    background: url(../images/arrow-left.png) no-repeat;
+    background-position: left center;
+}
+
+.button-right span {
+    background: url(../images/arrow-right.png) no-repeat;
+    background-position: right center;
+}
+
+button.button span {
+    padding: 0;
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#pager a,
+.clean {
+    text-indent: -1000em;
+    overflow: hidden;
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+    height: 650px;
+}
+
+#slides {
+    position: relative;
+    height: 650px;
+    margin-bottom: -42px;
+    width: 1110px;
+}
+
+.slide {
+    width: 1110px;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px 0 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+p strong {
+    color: #023255;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+}
+
+p em {
+    font-style: normal;
+    font-size: 18px;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    line-height: normal;
+}
+
+.content {
+    overflow: hidden;
+    clear: both;
+}
+
+.content cite {
+    color: #5393b2;
+    font-size: 11px;
+    font-style: normal;
+    margin-left: 26px;
+}
+
+/* slogans */
+.slogan1 {
+    width: 323px;
+    height: 154px;
+    background-position: 0px -287px;
+    margin: 39px 0 0 44px;
+}
+
+.slogan2 {
+    width: 225px;
+    height: 165px;
+    background-position: 0px -122px;
+    margin: 30px 1px 0 0;
+}
+
+.slogan3 {
+    margin: 85px 0 0;
+    padding: 20px 95px 0 0;
+    width: 240px;
+    clear: left;
+    background: url(../images/slogan3.png) no-repeat;
+    background-position: right top;
+}
+
+.slogan3 .button {
+    width: 231px;
+    margin-top: 37px;
+}
+
+.slogan4 {
+    margin: 104px 0 0;
+    width: 260px;
+    text-align: right;
+    clear: right;
+    background: url(../images/slogan4.png) no-repeat;
+    background-position: left 28px;
+    padding: 0 0 0 30px;
+}
+
+.slogan4 .button {
+    width: 210px;
+    margin: 35px 0 34px;
+    float: right;
+}
+
+.slogan4 em {
+    margin-bottom: 16px;
+}
+
+#pager {
+    overflow: hidden;
+    position: absolute;
+    bottom: 25px;
+    right: 40px;
+    z-index: 15;
+}
+
+#pager li {
+    display: block;
+    width: 13px;
+    float: left;
+    margin-left: 7px;
+}
+
+#pager a {
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#pager .selected a {
+    background-position: right -13px;
+}
+
+.list {
+    margin: 0 0 16px;
+}
+
+.list li {
+    padding-left: 24px;
+    margin-left: 2px;
+    background: url(../images/dot.png) no-repeat;
+    background-position: left center;
+}
+
+.pdfs {
+    overflow: hidden;
+}
+
+.pdfs li {
+    float: left;
+}
+
+.pdfs li a {
+    display: block;
+    padding: 5px 0 0 58px;
+    height: 35px;
+    background: url(../images/bottles.png) no-repeat;
+    background-position: left -250px;
+    color: #023255;
+    width: 192px;
+}
+
+.pdfs li a b {
+    display: block;
+}
+
+/* footer */
+#footer {
+    width: 1132px;
+    margin: 0 auto;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #5393b2;
+    position: relative;
+    z-index: 10;
+}
+
+#footer a {
+    text-decoration: underline;
+    color: #5393b2;
+    margin-right: 5px;
+}
+
+#footer a:hover {
+    text-decoration: none;
+}
+
+/* other */
+#new {
+    width: 122px;
+    height: 122px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: 0px 0px;
+}
+
+#parallax {
+    width: 1200px;
+    height: 654px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bg {
+    width: 680px;
+    height: 654px;
+    background: url(../images/bottle.jpg) no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 304px;
+    z-index: -1;
+}
+
+/* slide1 */
+#slide-1 .slogan1 {
+    margin-left: 64px;
+    margin-bottom: 42px;
+}
+
+#slide-1 .content {
+    margin-left: 35px;
+    width: 440px;
+}
+
+#slide-1 .content p {
+    margin-bottom: 16px;
+}
+
+#slide-1 .button,
+#slide-3 .button-back,
+#slide-4 .button-back{
+    width: 180px;
+    position: absolute;
+    right: 40px;
+    top: 503px;
+}
+
+#slide-1 h3 {
+    width: 213px;
+    height: 26px;
+    background: url(../images/sprites.png) no-repeat;
+    background-position: 0px -441px;
+    margin: 18px 0 19px;
+}
+
+#slide-1 .capacities {
+    overflow: hidden;
+}
+
+#slide-1 .capacities li {
+    font-weight: bold;
+    float: left;
+    padding-top: 16px;
+}
+
+#slide-1 .capacities li.ml250,
+#slide-1 .capacities li.ml500 {
+    font-weight: normal;
+    margin-left: 22px;
+    padding: 47px 0 33px 40px;
+    background: url(../images/bottles.png) no-repeat;
+    background-position: left top;    
+}
+
+#slide-1 .capacities li.ml500 {
+    background-position: left -120px;
+}
+
+/* slide3 */
+#slide-3 .qm {
+    background: url(../images/slogan3.png) no-repeat;
+    position: absolute;
+    left: 564px;
+    top: 131px;
+    z-index: -1;
+    width: 87px;
+    height: 147px;
+}
+
+#slide-3 .content {
+    float: right;
+    overflow: hidden;
+    width: 525px;
+}
+
+#slide-3 h1 {
+    width: 193px;
+    height: 70px;
+    background-position: left -467px;
+    float: right;
+    margin: 48px 103px 0 0;
+}
+
+#slide-3 .question {
+    background-position: left -537px;
+    height: 23px;
+    clear: both;
+    margin: 29px 0 26px;
+}
+
+#slide-3 .rules {
+    background-position: left -560px;
+    height: 20px;
+    margin: 45px 0 22px;
+}
+
+#slide-3 .button {
+    width: 236px;
+}
+
+#slide-3 .info {
+    overflow: hidden;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+}
+
+#slide-3 .bottom p {
+    padding-right: 30px;
+}
+
+#slide-3 .bottom p a {
+    color: #cb0000;
+    text-decoration: underline;
+}
+
+#slide-3 .bottom p a:hover {
+    text-decoration: none;
+}
+
+#slide-3 .info .button {
+    float: right;
+    text-transform: none;
+    margin: 3px;
+}
+
+#slide-3 .button-back,
+#slide-4 .button-back{
+    width: 178px;
+    left: 34px;
+    right: auto;
+}
+
+#slide-3 .button-back span,
+#slide-4 .button-back span {
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* slide4 */
+#slide-4 .slogan5 {
+    width: 343px;
+    float: right;
+    margin: 48px 42px 0 0;
+}
+
+#slide-4 h1 {
+    width: 343px;
+    height: 70px;
+    background-position: left -580px;
+}
+
+#slide-4 .slogan5 p {
+    margin: 31px 0 0 103px;
+}
+
+#slide-4 .content {
+    width: 509px;
+    float: right;
+}
+
+#slide-4 form p {
+    margin-bottom: 17px;
+}
+
+#slide-4 form fieldset > div {
+    overflow: hidden;
+}
+
+#wrapper #slide-4 form .error {
+    background: #ffe5e5;
+    border: solid 1px #f00;
+}
+
+#slide-4 textarea {
+    background: #fff;
+    border: none;
+    width: 485px;
+    height: 72px;
+    margin: 20px 0 18px;
+    resize: none;
+    min-width: 487px;
+    min-height: 74px;
+    max-width: 487px;
+    max-height: 74px;
+    color: #999;
+    padding: 3px 10px;
+    border: solid 1px #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#slide-4 label {
+    float: left;
+    clear: left;
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    margin: 0 21px 2px 0;
+    width: 181px;
+}
+
+#slide-4 input[type="text"] {
+    background: #fff;
+    border: none;
+    float: left;
+    width: 205px;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    color: #999;
+    margin: 0 0 2px;
+    border: solid 1px #fff;
+}
+
+#slide-4 label.checkbox {
+    clear: left;
+    overflow: hidden;
+    display: block;
+    width: auto;
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 9px;
+    color: #5393b2;
+    height: auto;
+    line-height: 11px;
+    text-align: left;
+    padding: 0 0 1px;
+}
+
+#slide-4 label[for="rules"] {
+    margin: 21px 0 8px;
+}
+
+#slide-4 label.l-agree,
+#slide-4 label[for="agree"] {
+    margin-bottom: 20px;
+    *display: block;
+    *width: 100%;
+}
+
+#slide-4 label.checkbox span {
+    margin-right: 10px;
+    border: solid 1px transparent;
+}
+
+#slide-4 label.checkbox span input {
+    margin: 0;
+    padding: 0;
+}
+
+#slide-4 label.checkbox a {
+    color: #023255;
+    text-decoration: underline;
+}
+
+#slide-4 label.checkbox a:hover {
+    text-decoration: none;
+}
+
+#slide-4 label[for="agree"] span {
+    margin-bottom: 45px;
+    float: left;
+}
+
+#slide-4 form button {
+    padding: 0 22px;
+    margin: 0 0 0 177px;
+}
+
+#slide-4 cite {
+    margin: 26px 0 0 26px;
+    display: block;
+}
+
+#slide-4 cite.alert {
+    color: #f00;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#slide-4 cite.success {
+    color: #023255;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#slide-1, #slide-3, #slide-4 {
+    display: none;
+}
+
+#slide-2 {
+    display: block;
+}
+
+#popup {
+    padding: 33px 0 27px;
+    width: 401px;
+    height: 66px;
+    position: absolute;
+    top: 272px;
+    right: 93px;
+    background: url(../images/popup.png) no-repeat;
+    display: none;
+    z-index: 1000;
+}
+
+#popup a {
+    display: block;
+    width: 94px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #023054;
+    margin-left: -47px;
+    bottom: 27px;
+    position: absolute;
+    background: url(../images/okbutton.png) no-repeat;
+    left: 50%;
+}
+
+#popup p {
+    text-align: center;
+}
+
+#popup p.success {
+    color: #023255;
+}
+
+#popup p.alert {
+    color: #f00;
+    font-weight: bold;
+}
+
+#mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+}
